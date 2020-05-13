@@ -30,7 +30,7 @@ CREATE TABLE `contato` (
   `telefone` varchar(13) NOT NULL,
   `email` varchar(70) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `contato` (
 
 LOCK TABLES `contato` WRITE;
 /*!40000 ALTER TABLE `contato` DISABLE KEYS */;
-INSERT INTO `contato` VALUES (2,'Ulysses Werlich','48984424614','werlichborgesulysses@gmail.com'),(3,'Priscila Schlemper','48 999131280','priscilaschlemper@gmail.com');
+INSERT INTO `contato` VALUES (2,'Ulysses Werlich','48984424614','werlichborgesulysses@gmail.com'),(3,'Priscila Duarte','48 999151899','prisciladuarte@gmail.com'),(6,'Marcos Antonio da Silva','48 984454642','marcos.silva@gmail.com'),(7,'Francisco da Silva','48 999264875','francisco1423@gmail.com'),(8,'João Ferreira Santos','48 991234678','ferreira.joao@gmail.com'),(9,'Fernanda Borges','48 984757645','fernanda.borges@gmail.com');
 /*!40000 ALTER TABLE `contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-08 14:16:55
+-- Dump completed on 2020-05-13 12:45:44

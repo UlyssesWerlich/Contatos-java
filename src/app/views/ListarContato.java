@@ -29,6 +29,7 @@ public class ListarContato extends JFrame{
 	private JButton btInserir;
 	private JButton btExcluir;
 	private JButton btEditar;
+	private JButton btAtualizar;
 	private DefaultTableModel modelo = new DefaultTableModel();
 	
 	public ListarContato() {
@@ -41,6 +42,7 @@ public class ListarContato extends JFrame{
 		btInserir = new JButton("Inserir");
 		btExcluir = new JButton("Excluir");
 		btEditar = new JButton("Editar");
+		btAtualizar = new JButton("Atualizar");
 		
 		painelBotoes = new JPanel();
 		barraRolagem = new JScrollPane(tabela);
@@ -50,6 +52,7 @@ public class ListarContato extends JFrame{
 		painelBotoes.add(btInserir);
 		painelBotoes.add(btEditar);
 		painelBotoes.add(btExcluir);
+		painelBotoes.add(btAtualizar);
 		painelFundo.add(BorderLayout.SOUTH, painelBotoes);
 		
 		getContentPane().add(painelFundo);
@@ -60,6 +63,7 @@ public class ListarContato extends JFrame{
 		btInserir.addActionListener(new BtInserirListener());
 		btEditar.addActionListener(new BtEditarListener());
 		btExcluir.addActionListener(new BtExcluirListener());
+		btAtualizar.addActionListener(new BtAtualizarListener());
 	}
 
 	private void criaJTable() {
@@ -116,6 +120,12 @@ public class ListarContato extends JFrame{
 			} else {
 				JOptionPane.showMessageDialog(null, "É necessário selecionar uma linha.");
 			}	
+		}
+	}
+	
+	private class BtAtualizarListener implements ActionListener{
+		public void actionPerformed(ActionEvent e) {
+			pesquisar(modelo);
 		}
 	}
 }

@@ -23,11 +23,11 @@ public class FabricaConexao {
 			
 		} catch (ClassNotFoundException e ) {
 			throw new ClassNotFoundException(
-					"Driver MySql não foi encontrado "
+					"Driver MySql não foi encontrado\n"
 					+ e.getMessage());
 		}catch (SQLException e) {
 			throw new SQLException("Erro ao conectar "
-					+ "com a base de dados" + e.getMessage());
+					+ "com a base de dados\n" + e.getMessage());
 		}
 	}
 	
@@ -36,11 +36,10 @@ public class FabricaConexao {
 		try {
 			if ( conn != null) {
 				conn.close();
-				System.out.println("Fechada a conexão dom o bando de dados");
 			}
 			
 		} catch (Exception e) {
-			System.out.println("Não foi possível fechar a conexão com o banco de dados "
+			System.out.println("Não foi possível fechar a conexão com o banco de dados\n"
 					+ e.getMessage());
 		}
 	}
@@ -52,10 +51,9 @@ public class FabricaConexao {
 			 }
 			 if (stmt != null) {
 				 stmt.close();
-				 System.out.println("Statement fechado com sucesso");
 			 }
 		 }catch (Exception e) {
-			 System.out.println("Não foi possível fechar o statement " + e.getMessage());
+			 System.out.println("Não foi possível fechar o statement\n" + e.getMessage());
 		 }
 	}
 	
@@ -66,10 +64,9 @@ public class FabricaConexao {
 			 }
 			 if (rs != null) {
 				 rs.close();
-				 System.out.println("ResultSet fechado com sucesso");
 			 }
 		 }catch (Exception e) {
-			 System.out.println("Não foi possível fechar o ResultSet " + e.getMessage());
+			 System.out.println("Não foi possível fechar o ResultSet\n" + e.getMessage());
 		 }
 	}
 }
